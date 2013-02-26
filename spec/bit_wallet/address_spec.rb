@@ -25,4 +25,13 @@ describe BitWallet::Address do
     end
   end
 
+  describe '#total_received' do
+    it 'should return the total amount received by the address' do
+      subject.client.stub(:getreceivedbyaddress).
+        with(subject.address, BitWallet.config.min_conf).
+        and_return(2.1)
+      subject.total_received.should == 2.1
+    end
+  end
+
 end

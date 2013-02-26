@@ -28,5 +28,9 @@ module BitWallet
                       BitWallet.config.min_conf)
     end
 
+    def total_received
+      client.getreceivedbyaccount(self.name, BitWallet.config.min_conf)
+    end
+
   end
 end

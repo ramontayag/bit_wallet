@@ -14,5 +14,9 @@ module BitWallet
                  end
     end
 
+    def total_received
+      client.getreceivedbyaddress(self.address, BitWallet.config.min_conf)
+    end
+
   end
 end
