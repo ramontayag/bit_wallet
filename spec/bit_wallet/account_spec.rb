@@ -37,4 +37,35 @@ describe BitWallet::Account do
     end
   end
 
+  describe '#balance' do
+    subject { wallet.accounts.new('nona') }
+
+    it 'should return the balance of the account' do
+      subject.balance.should ==
+        subject.client.getbalance(subject.name, BitWallet.config.min_conf)
+    end
+
+    it 'should default to the config min_conf' do
+      BitWallet.config.min_conf = 2
+      subject.client.should_receive(:getbalance).with(subject.name, 2)
+      subject.balance(2)
+    end
+
+    it 'should be able to override the min_conf' do
+      subject.client.should_receive(:getbalance).with(subject.name, 'min_conf')
+      subject.balance('min_conf')
+    end
+  end
+
+  describe '#send_amount' do
+    it 'should send money to the given address' do
+      default_account = wallet.accounts.new('')
+      nona_account = wallet.accounts.new('nona')
+      nona_address_str = nona_account.addresses.first.address
+      expected_balance = nona_account.balance + 5.5
+      default_account.send_amount 5.5, to: nona_address_str
+      nona_account.balance.should == expected_balance
+    end
+  end
+
 end

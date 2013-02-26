@@ -21,8 +21,10 @@ Or install it yourself as:
     wallet = BitWallet.new(:username => 'username', :password => 'password')
     account = wallet.accounts.new('account name')
     account.addresses.count # 1, as it already comes with an address
+    account.balance # returns the balance of the account
     address = account.addresses.new
     address.address # 8hdsakdjh82d9327ccb64642c - the address hash
+    account.send_amount 5.5, to: '8hdsakdjh82d9327ccb64642c' # sends 5.5 bitcoin to the address
 
 ## Contributing
 

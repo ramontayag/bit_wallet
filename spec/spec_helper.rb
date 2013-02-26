@@ -38,5 +38,8 @@ RSpec.configure do |config|
 
   config.before(:each) do
     system("cd #{TESTNET_DIR} && make clean > /dev/null")
+
+    # Do not wait for confirmations in tests -- too long!
+    BitWallet.config.min_conf = 0
   end
 end
