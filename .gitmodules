@@ -1,0 +1,3 @@
+[submodule "spec/testnet"]
+	path = spec/testnet
+	url = git://github.com/freewil/bitcoin-testnet-box.git
