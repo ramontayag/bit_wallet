@@ -1,6 +1,6 @@
 # BitWallet
 
-TODO: Write a gem description
+BitWallet is a Ruby-esque interface to a bitcoin daemon. It uses the [bitcoin-client](https://github.com/sinisterchipmunk/bitcoin-client) gem to execute the RPC calls to the daemon.
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    wallet = BitWallet.new(:username => 'username', :password => 'password')
+    account = wallet.accounts.new('account name')
+    account.addresses.count # 1, as it already comes with an address
+    address = account.addresses.new
+    address.address # 8hdsakdjh82d9327ccb64642c - the address hash
 
 ## Contributing
 
