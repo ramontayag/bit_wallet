@@ -6,10 +6,10 @@ require 'bit_wallet/version'
 Gem::Specification.new do |gem|
   gem.name          = "bit_wallet"
   gem.version       = BitWallet::VERSION
-  gem.authors       = ["TODO: Write your name"]
-  gem.email         = ["TODO: Write your email address"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Ramon Tayag"]
+  gem.email         = ["ramon.tayag@gmail.com"]
+  gem.description   = %q{Ruby-esque handling of Bitcoin wallet}
+  gem.summary       = %q{Ruby-esque handling of Bitcoin wallet.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
