@@ -20,4 +20,8 @@ module BitWallet
     Wallet.new(*args)
   end
 
+  def self.initialize(*args)
+    Wallet.new(*args)
+  end
+
 end
