@@ -66,6 +66,18 @@ describe BitWallet::Account do
       default_account.send_amount 5.5, to: nona_address_str
       nona_account.balance.should == expected_balance
     end
+
+    context 'account does not have enough money' do
+      it 'should fail with the InsufficientFunds error' do
+        default_account = wallet.accounts.new('')
+        nona_account = wallet.accounts.new('nona')
+        nona_address_str = nona_account.addresses.first.address
+        expect {
+          default_account.send_amount(default_account.balance+10,
+                                      to: nona_address_str)
+        }.to raise_error(BitWallet::InsufficientFunds, "cannot send an amount more than what this account () has")
+      end
+    end
   end
 
   describe '#total_received' do
