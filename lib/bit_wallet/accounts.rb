@@ -4,6 +4,10 @@ module BitWallet
     attr_reader :wallet
     delegate :client, to: :wallet
 
+    def with_balance
+      self.select { |account| account.balance > 0 }
+    end
+
     def initialize(wallet)
       @wallet = wallet
 
