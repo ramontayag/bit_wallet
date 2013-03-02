@@ -67,6 +67,18 @@ describe BitWallet::Account do
       nona_account.balance.should == expected_balance
     end
 
+    context ':to is a BitWallet::Address' do
+      it 'should send it to the #address of the given BitWallet::Address' do
+        default_account = wallet.accounts.new('')
+        nona_account = wallet.accounts.new('nona')
+        nona_address = nona_account.addresses.first
+
+        expected_balance = nona_account.balance + 5.2
+        default_account.send_amount 5.2, to: nona_address
+        nona_account.balance.should == expected_balance
+      end
+    end
+
     context 'account does not have enough money' do
       it 'should fail with the InsufficientFunds error' do
         default_account = wallet.accounts.new('')

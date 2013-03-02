@@ -25,6 +25,7 @@ Or install it yourself as:
     address = account.addresses.new
     address.address # 8hdsakdjh82d9327ccb64642c - the address hash
     account.send_amount 5.5, to: '8hdsakdjh82d9327ccb64642c' # sends 5.5 bitcoin to the address
+    account.send_amount 5.5, to: address # sends 5.5 bitcoin to the BitWallet::Address#address
     account.total_received # returns the total amount received by the account
     address.total_received # returns the total amount received by the address
 

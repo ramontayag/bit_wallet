@@ -19,9 +19,12 @@ module BitWallet
     end
 
     def send_amount(amount, options={})
-      unless options[:to]
+      if options[:to]
+        options[:to] = options[:to].address if options[:to].is_a?(Address)
+      else
         fail ArgumentError, 'address must be specified'
       end
+
       client.sendfrom(self.name,
                       options[:to],
                       amount,
