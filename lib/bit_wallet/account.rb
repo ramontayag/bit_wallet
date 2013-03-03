@@ -37,6 +37,15 @@ module BitWallet
       client.getreceivedbyaccount(self.name, BitWallet.config.min_conf)
     end
 
+    def ==(other_account)
+      self.name == other_account.name
+    end
+
+    def recent_transactions(options={})
+      count = options.delete(:limit) || 10
+      client.listtransactions self.name, count
+    end
+
     private
 
     def parse_error(response)

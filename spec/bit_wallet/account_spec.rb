@@ -101,4 +101,32 @@ describe BitWallet::Account do
     end
   end
 
+  describe '#recent_transactions' do
+    it 'should default to list 10 transactions' do
+      wallet = build(:wallet)
+      default_account = wallet.accounts.new('')
+      account_1 = wallet.accounts.new('1')
+
+      1.upto(11).each do |n|
+        default_account.send_amount n, to: account_1.addresses.first
+      end
+
+      account_1.recent_transactions.size.should == 10
+    end
+
+    context 'when transaction limit is 5' do
+      it 'should list the 5 most recent transactions' do
+        wallet = build(:wallet)
+        default_account = wallet.accounts.new('')
+        account_1 = wallet.accounts.new('1')
+
+        1.upto(6).each do |n|
+          default_account.send_amount n, to: account_1.addresses.first
+        end
+
+        account_1.recent_transactions(limit: 5).size.should == 5
+      end
+    end
+  end
+
 end
