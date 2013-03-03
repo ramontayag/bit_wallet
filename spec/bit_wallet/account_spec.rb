@@ -67,6 +67,18 @@ describe BitWallet::Account do
       nona_account.balance.should == expected_balance
     end
 
+    context ':to is a BitWallet::Address' do
+      it 'should send it to the #address of the given BitWallet::Address' do
+        default_account = wallet.accounts.new('')
+        nona_account = wallet.accounts.new('nona')
+        nona_address = nona_account.addresses.first
+
+        expected_balance = nona_account.balance + 5.2
+        default_account.send_amount 5.2, to: nona_address
+        nona_account.balance.should == expected_balance
+      end
+    end
+
     context 'account does not have enough money' do
       it 'should fail with the InsufficientFunds error' do
         default_account = wallet.accounts.new('')
@@ -86,6 +98,34 @@ describe BitWallet::Account do
         with(subject.name, BitWallet.config.min_conf).
         and_return(2.1)
       subject.total_received.should == 2.1
+    end
+  end
+
+  describe '#recent_transactions' do
+    it 'should default to list 10 transactions' do
+      wallet = build(:wallet)
+      default_account = wallet.accounts.new('')
+      account_1 = wallet.accounts.new('1')
+
+      1.upto(11).each do |n|
+        default_account.send_amount n, to: account_1.addresses.first
+      end
+
+      account_1.recent_transactions.size.should == 10
+    end
+
+    context 'when transaction limit is 5' do
+      it 'should list the 5 most recent transactions' do
+        wallet = build(:wallet)
+        default_account = wallet.accounts.new('')
+        account_1 = wallet.accounts.new('1')
+
+        1.upto(6).each do |n|
+          default_account.send_amount n, to: account_1.addresses.first
+        end
+
+        account_1.recent_transactions(limit: 5).size.should == 5
+      end
     end
   end
 

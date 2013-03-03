@@ -19,14 +19,31 @@ Or install it yourself as:
 ## Usage
 
     wallet = BitWallet.new(:username => 'username', :password => 'password')
+    wallet.accounts.with_balance # returns array of the accounts with balance > 0
     account = wallet.accounts.new('account name')
     account.addresses.count # 1, as it already comes with an address
     account.balance # returns the balance of the account
     address = account.addresses.new
     address.address # 8hdsakdjh82d9327ccb64642c - the address hash
     account.send_amount 5.5, to: '8hdsakdjh82d9327ccb64642c' # sends 5.5 bitcoin to the address
+    account.send_amount 5.5, to: address # sends 5.5 bitcoin to the BitWallet::Address#address
     account.total_received # returns the total amount received by the account
+    account.transactions # returns array of 10 BitWallet::Transaction
+    account.transactions(limit: 5) # returns array of 5 BitWallet::Transaction
     address.total_received # returns the total amount received by the address
+
+### Transaction
+
+A transaction has the following methods:
+
+- `account`: the account it belongs to
+- `address`: the address it belongs to
+- `amount`: how much was transferred
+- `category`: returns the category value of the transaction
+- `confirmation`: how many times this has been confirmed by the network
+- `id`: the transaction id
+- `occurred_at`: Ruby Time object for the `time` value returned by bitcoind
+- `received_at`: Ruby Time object for the `timereceived` value returned by bitcoind
 
 ## Contributing
 

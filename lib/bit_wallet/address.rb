@@ -18,5 +18,9 @@ module BitWallet
       client.getreceivedbyaddress(self.address, BitWallet.config.min_conf)
     end
 
+    def ==(other_address)
+      self.address == other_address.address
+    end
+
   end
 end

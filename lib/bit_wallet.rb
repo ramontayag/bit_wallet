@@ -11,6 +11,7 @@ require 'bit_wallet/account'
 require 'bit_wallet/accounts'
 require 'bit_wallet/addresses'
 require 'bit_wallet/address'
+require 'bit_wallet/transaction'
 require 'bit_wallet/errors'
 
 module BitWallet

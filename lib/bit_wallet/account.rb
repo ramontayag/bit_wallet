@@ -19,9 +19,12 @@ module BitWallet
     end
 
     def send_amount(amount, options={})
-      unless options[:to]
+      if options[:to]
+        options[:to] = options[:to].address if options[:to].is_a?(Address)
+      else
         fail ArgumentError, 'address must be specified'
       end
+
       client.sendfrom(self.name,
                       options[:to],
                       amount,
@@ -32,6 +35,15 @@ module BitWallet
 
     def total_received
       client.getreceivedbyaccount(self.name, BitWallet.config.min_conf)
+    end
+
+    def ==(other_account)
+      self.name == other_account.name
+    end
+
+    def recent_transactions(options={})
+      count = options.delete(:limit) || 10
+      client.listtransactions self.name, count
     end
 
     private

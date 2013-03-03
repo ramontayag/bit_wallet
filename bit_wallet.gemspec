@@ -22,4 +22,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec', '2.12.0'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'factory_girl', '4.2.0'
+  gem.add_development_dependency 'bitcoin_testnet', '0.0.1'
 end
