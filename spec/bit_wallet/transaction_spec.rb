@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet::Transaction do
+describe BitWallet::Transaction, vcr: true do
 
   describe 'on initialization' do
     it 'should be able to take a bitcoind hash' do

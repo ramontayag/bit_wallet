@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet::Addresses do
+describe BitWallet::Addresses, vcr: true do
 
   let(:account) { build(:account) }
   subject { BitWallet::Addresses.new(account) }
