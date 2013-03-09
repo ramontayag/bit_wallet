@@ -10,6 +10,8 @@ require 'pry'
 require 'factory_girl'
 require_relative 'factories'
 require 'bitcoin_testnet'
+require 'vcr'
+require 'webmock'
 
 Config = {}
 yaml_config_file = File.open(File.join(File.dirname(__FILE__), 'config.yml'))
@@ -18,7 +20,13 @@ Config[:username] = yaml_config[:rpcuser]
 Config[:port] = yaml_config[:rpcport]
 Config[:password] = yaml_config[:rpcpassword]
 
-BitcoinTestnet.configure_rspec!
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+end
+
+BitcoinTestnet.configure_with_rspec_and_vcr!
 BitcoinTestnet.dir = File.join(File.dirname(__FILE__), 'testnet')
 
 RSpec.configure do |config|
