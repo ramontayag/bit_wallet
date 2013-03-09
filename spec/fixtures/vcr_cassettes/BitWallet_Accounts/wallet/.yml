@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"listaccounts","params":[1],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:29 +0000
+      - Sat, 09 Mar 2013 05:19:56 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -36,12 +36,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:29 GMT
+  recorded_at: Sat, 09 Mar 2013 05:19:56 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getnewaddress","params":[""],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:29 +0000
+      - Sat, 09 Mar 2013 05:19:56 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -73,5 +73,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:29 GMT
+  recorded_at: Sat, 09 Mar 2013 05:19:56 GMT
 recorded_with: VCR 2.4.0

@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"listaccounts","params":[1],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -36,12 +36,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getnewaddress","params":[""],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -73,12 +73,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getnewaddress","params":["nomoney"],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -95,7 +95,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -110,12 +110,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getnewaddress","params":["moneyd"],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -132,7 +132,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -147,12 +147,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"sendfrom","params":["","mu2dJuiof4vUm3hBgX8F4FZBzsMEqPXEui",10,0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -169,7 +169,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -180,16 +180,16 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"c361fa8c786d924a526b30bdab5f2dfdd14721e38ce0510084c1f248f56e1597","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"5c4cd1dc3a054fd6a47f6fdf85b45a5b774941adc339073aafa261323ca8d463","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -206,7 +206,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -221,12 +221,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["nomoney",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -243,7 +243,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -258,12 +258,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["moneyd",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -280,7 +280,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -295,12 +295,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["nomoney",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -317,7 +317,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -332,12 +332,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"sendfrom","params":["nomoney","mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U",0.0,0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -354,7 +354,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - close
       Content-Length:
@@ -369,12 +369,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -391,7 +391,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -406,12 +406,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["nomoney",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -428,7 +428,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -443,12 +443,12 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getbalance","params":["moneyd",0],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -465,7 +465,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:39 +0000
+      - Sat, 09 Mar 2013 05:20:07 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -480,5 +480,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:39 GMT
+  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
 recorded_with: VCR 2.4.0
