@@ -40,7 +40,7 @@ A transaction has the following methods:
 - `address`: the address it belongs to
 - `amount`: how much was transferred
 - `category`: returns the category value of the transaction
-- `confirmation`: how many times this has been confirmed by the network
+- `confirmations`: how many times this has been confirmed by the network
 - `id`: the transaction id
 - `occurred_at`: Ruby Time object for the `time` value returned by bitcoind
 - `received_at`: Ruby Time object for the `timereceived` value returned by bitcoind
