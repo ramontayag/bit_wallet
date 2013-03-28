@@ -7,7 +7,8 @@ module BitWallet
                 :confirmations,
                 :id,
                 :occurred_at,
-                :received_at)
+                :received_at,
+                :address_str)
 
     def initialize(wallet, args)
       args = args.with_indifferent_access
