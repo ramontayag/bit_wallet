@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet, vcr: true do
+describe BitWallet do
 
   describe '.config' do
     it 'should be a configurable object' do
