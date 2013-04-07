@@ -22,19 +22,17 @@ describe BitWallet::Wallet, vcr: true do
       wallet.recent_transactions.size.should == 10
     end
 
-    # FIXME when bitcoin-client this is resolved: https://github.com/sinisterchipmunk/bitcoin-client/issues/4
-    it 'should allow overriding of the transaction limit'
-    # it 'should allow overriding of the transaction limit' do
-    #   wallet = build(:wallet)
-    #   default_account = wallet.accounts.new('')
-    #   account_1 = wallet.accounts.new('1')
+    it 'should allow overriding of the transaction limit' do
+      wallet = build(:wallet)
+      default_account = wallet.accounts.new('')
+      account_1 = wallet.accounts.new('1')
 
-    #   1.upto(11).each do |n|
-    #     default_account.send_amount n, to: account_1.addresses.first
-    #   end
+      1.upto(11).each do |n|
+        default_account.send_amount n, to: account_1.addresses.first
+      end
 
-    #   wallet.recent_transactions(limit: 5).size.should == 5
-    # end
+      wallet.recent_transactions(limit: 5).size.should == 5
+    end
   end
 
 end

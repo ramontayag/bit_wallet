@@ -11,7 +11,7 @@ module BitWallet
 
     def recent_transactions(options={})
       count = options.delete(:limit) || 10
-      client.listtransactions(nil, count).map do |hash|
+      client.listtransactions('*', count).map do |hash|
         Transaction.new self, hash
       end
     end
