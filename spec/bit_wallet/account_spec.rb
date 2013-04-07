@@ -114,21 +114,19 @@ describe BitWallet::Account, vcr: true do
       account_1.recent_transactions.size.should == 10
     end
 
-    context 'when transaction limit is 5' do
-      # FIXME when bitcoin-client this is resolved: https://github.com/sinisterchipmunk/bitcoin-client/issues/4
-      it 'should list the 5 most recent transactions'
-      # it 'should list the 5 most recent transactions' do
-      #   pending "Fix this when when..."
-      #   wallet = build(:wallet)
-      #   default_account = wallet.accounts.new('')
-      #   account_1 = wallet.accounts.new('1')
+    context 'when transaction limit is 6' do
+      it 'should list the 6 most recent transactions' do
+        wallet = build(:wallet)
+        default_account = wallet.accounts.new('')
+        account_1 = wallet.accounts.new('1')
 
-      #   1.upto(6).each do |n|
-      #     default_account.send_amount n, to: account_1.addresses.first
-      #   end
+        1.upto(8).each do |n|
+          default_account.send_amount n, to: account_1.addresses.first
+        end
 
-      #   account_1.recent_transactions(limit: 5).size.should == 5
-      # end
+        transactions = account_1.recent_transactions(limit: 6)
+        transactions.size.should == 6
+      end
     end
   end
 
