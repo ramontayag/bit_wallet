@@ -21,22 +21,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
-      - '58'
+      - '134'
       Content-Type:
       - application/json
       Server:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":{"":8800.00000000},"error":null,"id":"jsonrpc"}
+      string: ! '{"result":{"":8390.28800000,"1":0.00000000,"accountname":0.00000000,"name":0.00000000,"nona":0.00000000},"error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -69,11 +69,159 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"mo66G38qvYg2xFhoGrHPbgb6FCUvxGVq25","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getnewaddress","params":["1"],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '56'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '76'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"mg6xWTbVuRJSofqUnkF66yRGKLPnxB5yhU","error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getnewaddress","params":["accountname"],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '66'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '76'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"mfZzs9nGCWsbjCamhqjVzNMw26kg6VvbXd","error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getnewaddress","params":["name"],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '59'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '76'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"mhrU1Hp2jPrkoo7unfbjq5FFUmS9tgSxDP","error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getnewaddress","params":["nona"],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '59'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '76'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"mirNbszNmhMnYyqBSsxa6vPGVnNij8wYZR","error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -95,7 +243,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -106,11 +254,11 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"mgk6xXZyQNNxKhYDYhp94KdXftG8HhNPpC","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -132,7 +280,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -143,17 +291,17 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mu2dJuiof4vUm3hBgX8F4FZBzsMEqPXEui","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"n3bancdUf7LE4gi7MY65m1mNAzGcJU7DD8","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mu2dJuiof4vUm3hBgX8F4FZBzsMEqPXEui",10,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","n3bancdUf7LE4gi7MY65m1mNAzGcJU7DD8",10,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
@@ -169,7 +317,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -180,11 +328,11 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"5c4cd1dc3a054fd6a47f6fdf85b45a5b774941adc339073aafa261323ca8d463","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"fab2b1f17e561d53b97d6d443e436aaec948d6b3192171d41dd434e89b07944b","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -206,7 +354,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -217,11 +365,159 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":8790.00000000,"error":null,"id":"jsonrpc"}
+      string: ! '{"result":8380.28750000,"error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["1",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '55'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":399.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["accountname",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '65'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":0.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["name",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '58'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":0.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["nona",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '58'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":10.70000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -243,7 +539,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -258,7 +554,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -280,7 +576,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -295,7 +591,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -317,7 +613,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -332,13 +628,13 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["nomoney","mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U",0.0,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["nomoney","mo66G38qvYg2xFhoGrHPbgb6FCUvxGVq25",0.0,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
@@ -354,7 +650,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - close
       Content-Length:
@@ -369,7 +665,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -391,7 +687,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -402,11 +698,159 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":8790.00000000,"error":null,"id":"jsonrpc"}
+      string: ! '{"result":8380.28750000,"error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["1",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '55'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":399.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["accountname",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '65'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":0.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["name",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '58'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":0.00000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
+- request:
+    method: post
+    uri: http://admin1:123@localhost:19001/
+    body:
+      encoding: US-ASCII
+      string: ! '{"method":"getbalance","params":["nona",0],"id":"jsonrpc"}'
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '58'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Apr 2013 10:01:32 +0000
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/json
+      Server:
+      - bitcoin-json-rpc/v0.7.2-beta
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":10.70000000,"error":null,"id":"jsonrpc"}
+
+'
+    http_version: 
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -428,7 +872,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -443,7 +887,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:32 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -465,7 +909,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Mar 2013 05:20:07 +0000
+      - Sun, 07 Apr 2013 10:01:32 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -480,5 +924,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 09 Mar 2013 05:20:07 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:33 GMT
 recorded_with: VCR 2.4.0

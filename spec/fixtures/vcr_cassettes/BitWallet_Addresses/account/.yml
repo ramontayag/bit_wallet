@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ! '{"method":"getnewaddress","params":["name"],"id":"jsonrpc"}'
     headers:
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Mar 2013 10:30:56 +0000
+      - Sun, 07 Apr 2013 10:01:48 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -32,9 +32,9 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"mwypwgBwAnXQckXAuu9Pea4UCaesEsLkks","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Thu, 07 Mar 2013 10:30:56 GMT
+  recorded_at: Sun, 07 Apr 2013 10:01:48 GMT
 recorded_with: VCR 2.4.0
