@@ -1,14 +1,15 @@
 module BitWallet
   class Transaction
 
-    attr_reader(:account,
-                :amount,
-                :category,
-                :confirmations,
-                :id,
-                :occurred_at,
-                :received_at,
-                :address_str)
+    READER_ATTRS = [:account,
+                    :amount,
+                    :category,
+                    :confirmations,
+                    :id,
+                    :occurred_at,
+                    :received_at,
+                    :address_str]
+    attr_reader *READER_ATTRS
 
     def initialize(wallet, args)
       args = args.with_indifferent_access

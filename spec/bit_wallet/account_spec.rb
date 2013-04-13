@@ -130,4 +130,20 @@ describe BitWallet::Account, vcr: true do
     end
   end
 
+  describe '#send_many' do
+    it 'should send the amounts of money to the specified accounts' do
+      default_account = wallet.accounts.new('')
+      account_1 = wallet.accounts.new('account_1')
+      account_1_address_str = account_1.addresses.first.address
+      account_2 = wallet.accounts.new('account_2')
+      account_2_address = account_2.addresses.first
+
+      default_account.send_many(account_1_address_str => 0.4,
+                                account_2_address => 2.323)
+
+      account_1.balance.should == 0.4
+      account_2.balance.should == 2.323
+    end
+  end
+
 end
