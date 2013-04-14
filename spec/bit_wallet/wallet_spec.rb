@@ -35,4 +35,15 @@ describe BitWallet::Wallet, vcr: true do
     end
   end
 
+  describe '#move' do
+    it 'should move funds from one account to another' do
+      wallet = build(:wallet)
+      default_account = wallet.accounts.new('')
+      account_1 = wallet.accounts.new('1')
+      wallet.move '', '1', 1.1
+      wallet.move default_account, account_1, 0.5
+      account_1.balance.should == 1.6
+    end
+  end
+
 end
