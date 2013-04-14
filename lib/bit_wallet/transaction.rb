@@ -10,6 +10,7 @@ module BitWallet
                     :received_at,
                     :address_str]
     attr_reader *READER_ATTRS
+    delegate :wallet, to: :account
 
     def initialize(wallet, args)
       args = args.with_indifferent_access

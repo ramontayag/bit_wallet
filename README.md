@@ -28,6 +28,8 @@ Or install it yourself as:
     account.send_amount 5.5, to: '8hdsakdjh82d9327ccb64642c' # sends 5.5 bitcoin to the address
     account.send_amount 5.5, to: address # sends 5.5 bitcoin to the BitWallet::Address#address
     account.send_many '8hdsakdjh82d9327ccb64642c' => 2.21, address => 0.332
+    wallet.move 'accountname', 'toanotheraccount', 2.1
+    wallet.move account_object, another_account_object, 1.1
     account.total_received # returns the total amount received by the account
     account.transactions # returns array of 10 BitWallet::Transaction
     account.transactions(limit: 5) # returns array of 5 BitWallet::Transaction
