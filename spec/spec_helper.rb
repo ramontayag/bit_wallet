@@ -35,4 +35,6 @@ RSpec.configure do |config|
   config.before(:each) do
     BitWallet.config.min_conf = 0
   end
+
+  config.order = "random"
 end
