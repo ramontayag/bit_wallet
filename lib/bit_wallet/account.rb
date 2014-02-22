@@ -71,10 +71,7 @@ module BitWallet
     private
 
     def parse_error(message)
-      error = if message.include?("-6")
-                InsufficientFunds.new("cannot send an amount more than what this account (#{self.name}) has")
-              end
-      fail error if error
+      HandlesError.from(message)
     end
 
   end

@@ -15,6 +15,7 @@ require 'bit_wallet/address'
 require 'bit_wallet/transaction'
 require 'bit_wallet/errors'
 require 'bit_wallet/instantiates_bitcoin_client'
+require 'bit_wallet/handles_error'
 
 module BitWallet
 

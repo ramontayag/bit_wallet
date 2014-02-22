@@ -87,7 +87,7 @@ describe BitWallet::Account, vcr: true do
         expect {
           default_account.send_amount(default_account.balance+10,
                                       to: nona_address_str)
-        }.to raise_error(BitWallet::InsufficientFunds, "cannot send an amount more than what this account () has")
+        }.to raise_error(BitWallet::InsufficientFunds, "cannot send an amount more than what this account has")
       end
     end
   end
