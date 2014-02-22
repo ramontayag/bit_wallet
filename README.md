@@ -19,6 +19,8 @@ Or install it yourself as:
 ## Usage
 
     wallet = BitWallet.new(:username => 'username', :password => 'password')
+    # You can also pass :port and :host
+
     wallet.accounts.with_balance # returns array of the accounts with balance > 0
     account = wallet.accounts.new('account name')
     account.addresses.count # 1, as it already comes with an address

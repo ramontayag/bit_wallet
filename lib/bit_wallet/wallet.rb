@@ -42,9 +42,7 @@ module BitWallet
     private
 
     def client
-      @client ||= Bitcoin::Client.new(@config[:username],
-                                      @config[:password],
-                                      @config.slice(:port))
+      @client ||= InstantiatesBitcoinClient.execute(@config)
     end
 
   end
