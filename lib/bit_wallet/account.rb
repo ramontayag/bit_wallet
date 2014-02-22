@@ -29,8 +29,8 @@ module BitWallet
                       options[:to],
                       amount,
                       BitWallet.config.min_conf)
-    rescue RestClient::InternalServerError => e
-      parse_error e.response
+    rescue Bitcoin::Errors::RPCError => e
+      parse_error e.message
     end
 
     def total_received
@@ -70,14 +70,9 @@ module BitWallet
 
     private
 
-    def parse_error(response)
-      json_response = JSON.parse(response)
-      hash = json_response.with_indifferent_access
-      error = if hash[:error]
-                case hash[:error][:code]
-                when -6
-                  InsufficientFunds.new("cannot send an amount more than what this account (#{self.name}) has")
-                end
+    def parse_error(message)
+      error = if message.include?("-6")
+                InsufficientFunds.new("cannot send an amount more than what this account (#{self.name}) has")
               end
       fail error if error
     end
