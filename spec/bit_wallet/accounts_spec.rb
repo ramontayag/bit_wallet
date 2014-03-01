@@ -39,10 +39,6 @@ describe BitWallet::Accounts, vcr: true do
       accounts_with_balance.should include(default_account)
       accounts_with_balance.should_not include(account_1)
       accounts_with_balance.should include(account_2)
-
-      account_1.send_amount account_1.balance, to: default_account.addresses.first
-
-      subject.with_balance.should_not include(account_1)
     end
   end
 
