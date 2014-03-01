@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet::Accounts, vcr: true do
+describe BitWallet::Accounts, vcr: {record: :once} do
 
   let(:wallet) do
     build(:wallet)
