@@ -50,6 +50,10 @@ A transaction has the following methods:
 - `occurred_at`: Ruby Time object for the `time` value returned by bitcoind
 - `received_at`: Ruby Time object for the `timereceived` value returned by bitcoind
 
+## Tests
+
+- You must set up bitcoind, and it must be in the executable path. See README.txt in `spec/testnet` as to what version to install.
+
 ## Contributing
 
 1. Fork it
