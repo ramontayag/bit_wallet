@@ -19,6 +19,8 @@ Or install it yourself as:
 ## Usage
 
     wallet = BitWallet.new(:username => 'username', :password => 'password')
+    # You can also pass :port and :host
+
     wallet.accounts.with_balance # returns array of the accounts with balance > 0
     account = wallet.accounts.new('account name')
     account.addresses.count # 1, as it already comes with an address
@@ -47,6 +49,10 @@ A transaction has the following methods:
 - `id`: the transaction id
 - `occurred_at`: Ruby Time object for the `time` value returned by bitcoind
 - `received_at`: Ruby Time object for the `timereceived` value returned by bitcoind
+
+## Tests
+
+- You must set up bitcoind, and it must be in the executable path. See README.txt in `spec/testnet` as to what version to install.
 
 ## Contributing
 
