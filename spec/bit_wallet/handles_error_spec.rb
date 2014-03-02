@@ -10,6 +10,13 @@ module BitWallet
         end
       end
 
+      context "error is -5" do
+        it "raises InvalidAddress error" do
+          expect { described_class.from("some error -5 message") }.
+            to raise_error(InvalidAddress, "bitcoin address is invalid")
+        end
+      end
+
       context "error is -6" do
         it "raises InsufficientFunds error" do
           expect { described_class.from("-6 message") }.

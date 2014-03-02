@@ -60,12 +60,7 @@ module BitWallet
                               BitWallet.config.min_conf)
       txid
     rescue => e
-      error_message = JSON.parse(e.response).with_indifferent_access
-      if error_message[:error][:code] == -6
-        fail InsufficientFunds, "'#{self.name}' does not have enough funds"
-      else
-        raise e
-      end
+      parse_error e.message
     end
 
     private
