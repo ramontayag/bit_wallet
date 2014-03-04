@@ -39,8 +39,6 @@ module BitWallet
                   comment)
     end
 
-    private
-
     def client
       @client ||= InstantiatesBitcoinClient.execute(@config)
     end

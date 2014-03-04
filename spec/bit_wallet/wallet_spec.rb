@@ -46,4 +46,18 @@ describe BitWallet::Wallet, vcr: true do
     end
   end
 
+  describe "#client" do
+    it "returns the client created by InstantiatesBitcoinClient" do
+      client = double
+      config = {some: "config"}
+      allow(BitWallet::InstantiatesBitcoinClient).
+        to receive(:execute).with(config).
+        and_return(client)
+
+      wallet = described_class.new(config)
+
+      expect(wallet.client).to eq(client)
+    end
+  end
+
 end
