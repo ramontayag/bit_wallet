@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport'
   gem.add_development_dependency 'rspec', '~> 2.12'
   gem.add_development_dependency 'factory_girl', '4.2.0'
-  gem.add_development_dependency 'bitcoin_testnet', '0.5.0'
+  gem.add_development_dependency 'bitcoin_testnet', '0.5.1'
   gem.add_development_dependency 'vcr', '~> 2.4'
   gem.add_development_dependency 'webmock', '1.9.0'
 end
