@@ -1,3 +1,7 @@
+# v0.6.1
+
+- Fix warning where Wallet#client was being accessed but it was private
+
 # v0.6.0
 
 - Handle error -6 (invalid address)
