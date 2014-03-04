@@ -11,6 +11,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '53'
       User-Agent:
@@ -21,22 +23,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:20 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
-      - '109'
+      - '58'
       Content-Type:
       - application/json
       Server:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":{"":8426.29200000,"1":0.00000000,"name":0.00000000,"nona":0.00000000},"error":null,"id":"jsonrpc"}
+      string: ! '{"result":{"":8800.00000000},"error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:20 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -48,6 +50,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '55'
       User-Agent:
@@ -58,7 +62,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:20 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -69,11 +73,11 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mpJYbgMc5Lp63R23fMsSZLp8XpL9QLkjDf","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:20 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -85,6 +89,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '56'
       User-Agent:
@@ -95,7 +101,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:20 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -106,96 +112,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:20 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"getnewaddress","params":["name"],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",1,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
-      Content-Length:
-      - '59'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '76'
       Content-Type:
       - application/json
-      Server:
-      - bitcoin-json-rpc/v0.7.2-beta
-    body:
-      encoding: US-ASCII
-      string: ! '{"result":"mtDGW9uZrRTErptEW1UnHeYLh5J3H4TyDB","error":null,"id":"jsonrpc"}
-
-'
-    http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
-- request:
-    method: post
-    uri: http://admin1:123@localhost:19001/
-    body:
-      encoding: US-ASCII
-      string: ! '{"method":"getnewaddress","params":["nona"],"id":"jsonrpc"}'
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Content-Length:
-      - '59'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '76'
-      Content-Type:
-      - application/json
-      Server:
-      - bitcoin-json-rpc/v0.7.2-beta
-    body:
-      encoding: US-ASCII
-      string: ! '{"result":"mt4r2DTg2zRqbAboQG3t5sTJu1VG9wtoom","error":null,"id":"jsonrpc"}
-
-'
-    http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
-- request:
-    method: post
-    uri: http://admin1:123@localhost:19001/
-    body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",1,0],"id":"jsonrpc"}'
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
       Content-Length:
       - '91'
       User-Agent:
@@ -206,7 +140,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -217,22 +151,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"123ef5ffaf9a98ef740a511f4e496823841d08fa54fa65e4507441c7cb8d96f2","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"9532bc899b72b7f26deeed5076e5cb183026dc9836d3475e46a0b5a6b63fb0d4","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",2,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",2,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -243,7 +179,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -254,22 +190,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"8c9466fe53167cfea8cecaa6a966172e44ea56b5e21bbe9d31797b2760e949fa","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"737ba5984490e3a365fd36f795869898f018d683e4851d0ce514268f101654ef","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",3,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",3,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -280,7 +218,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -291,22 +229,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"a003cac652fe505109712d64a43654e17d0d24c34997038ffd785d722a24073f","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"ea86199db8820c7e7cfda04fc474905b8bde9c558ca0514fed90b406d0ccb26a","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",4,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",4,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -317,7 +257,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -328,22 +268,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"d8881f10d5b3198223ca8e03385f49412b2d07eba07cc23e72ae478efdda0061","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"255c3d96ae385f3cb14fb07e705205c3daedd0822a1b48f1a52f8723d45c63d2","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",5,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",5,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -354,7 +296,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -365,22 +307,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"c634c0c20e8c693d36b187b8876da81c07e863fddbace50f546fa0141a5aed28","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"b62aed8139061d092e8abe5ab4f6d373440421eb6b9ee3166202a8c78bdd0fd1","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",6,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",6,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -391,7 +335,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -402,22 +346,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"8e791d11ae9df179c2ce07bee586f002550dd9248bf97c0acbdd748a9b024bef","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"2d494aef4d90ffe547159ceff2e8ebee329266eb97afd777808940dea653542b","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",7,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",7,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -428,7 +374,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -439,22 +385,24 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"e4cd79fe5d1555386fade079be3d2165e05b7615f5731af6e5714b3c73b85f32","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"22253d3d40f9e160b2cafba4422c55cee6815c77bb9041260d06e6084fff5237","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
     body:
       encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9",8,0],"id":"jsonrpc"}'
+      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",8,0],"id":"jsonrpc"}'
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '91'
       User-Agent:
@@ -465,7 +413,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -476,11 +424,11 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":"85168871234439c6c45155362c73b81fc8e7b3a9e18f273dd36614296f59ecda","error":null,"id":"jsonrpc"}
+      string: ! '{"result":"510f8afb16247b0f855ad68f1fc36e1a4b2ee247641261a60cd95b07485011cf","error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
 - request:
     method: post
     uri: http://admin1:123@localhost:19001/
@@ -492,6 +440,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Content-Type:
+      - application/json
       Content-Length:
       - '61'
       User-Agent:
@@ -502,7 +452,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Apr 2013 10:01:21 +0000
+      - Tue, 04 Mar 2014 14:05:00 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -513,9 +463,9 @@ http_interactions:
       - bitcoin-json-rpc/v0.7.2-beta
     body:
       encoding: US-ASCII
-      string: ! '{"result":[{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":3.00000000,"confirmations":0,"txid":"a003cac652fe505109712d64a43654e17d0d24c34997038ffd785d722a24073f","time":1365328881,"timereceived":1365328881},{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":4.00000000,"confirmations":0,"txid":"d8881f10d5b3198223ca8e03385f49412b2d07eba07cc23e72ae478efdda0061","time":1365328881,"timereceived":1365328881},{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":5.00000000,"confirmations":0,"txid":"c634c0c20e8c693d36b187b8876da81c07e863fddbace50f546fa0141a5aed28","time":1365328881,"timereceived":1365328881},{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":6.00000000,"confirmations":0,"txid":"8e791d11ae9df179c2ce07bee586f002550dd9248bf97c0acbdd748a9b024bef","time":1365328881,"timereceived":1365328881},{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":7.00000000,"confirmations":0,"txid":"e4cd79fe5d1555386fade079be3d2165e05b7615f5731af6e5714b3c73b85f32","time":1365328881,"timereceived":1365328881},{"account":"1","address":"mqJHCXEhuMEEm27L2WyzYb2DgSVxzEyGD9","category":"receive","amount":8.00000000,"confirmations":0,"txid":"85168871234439c6c45155362c73b81fc8e7b3a9e18f273dd36614296f59ecda","time":1365328881,"timereceived":1365328881}],"error":null,"id":"jsonrpc"}
+      string: ! '{"result":[{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":3.00000000,"confirmations":0,"txid":"ea86199db8820c7e7cfda04fc474905b8bde9c558ca0514fed90b406d0ccb26a","time":1393941900,"timereceived":1393941900},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":4.00000000,"confirmations":0,"txid":"255c3d96ae385f3cb14fb07e705205c3daedd0822a1b48f1a52f8723d45c63d2","time":1393941900,"timereceived":1393941900},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":5.00000000,"confirmations":0,"txid":"b62aed8139061d092e8abe5ab4f6d373440421eb6b9ee3166202a8c78bdd0fd1","time":1393941900,"timereceived":1393941900},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":6.00000000,"confirmations":0,"txid":"2d494aef4d90ffe547159ceff2e8ebee329266eb97afd777808940dea653542b","time":1393941900,"timereceived":1393941900},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":7.00000000,"confirmations":0,"txid":"22253d3d40f9e160b2cafba4422c55cee6815c77bb9041260d06e6084fff5237","time":1393941900,"timereceived":1393941900},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":8.00000000,"confirmations":0,"txid":"510f8afb16247b0f855ad68f1fc36e1a4b2ee247641261a60cd95b07485011cf","time":1393941900,"timereceived":1393941900}],"error":null,"id":"jsonrpc"}
 
 '
     http_version: 
-  recorded_at: Sun, 07 Apr 2013 10:01:21 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Tue, 04 Mar 2014 14:05:00 GMT
+recorded_with: VCR 2.8.0
