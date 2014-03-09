@@ -138,9 +138,10 @@ describe BitWallet::Account, vcr: true do
       account_2 = wallet.accounts.new('account_2')
       account_2_address = account_2.addresses.first
 
-      default_account.send_many(account_1_address_str => 0.4,
-                                account_2_address => 2.323)
+      tx_id = default_account.send_many(account_1_address_str => 0.4,
+                                        account_2_address => 2.323)
 
+      expect(tx_id).to be_a(String)
       account_1.balance.should == 0.4
       account_2.balance.should == 2.323
     end
