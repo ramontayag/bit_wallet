@@ -1,3 +1,7 @@
+# v0.7.0
+
+- `min_conf` is configurable directly via `BitWallet.min_conf` instead of `BitWallet.config.min_conf`
+
 # v0.6.1
 
 - Fix warning where Wallet#client was being accessed but it was private
