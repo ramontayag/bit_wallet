@@ -2,10 +2,17 @@ require 'spec_helper'
 
 describe BitWallet do
 
-  describe '.config' do
-    it 'should be a configurable object' do
-      described_class.config.min_conf = 22
-      described_class.config.min_conf.should == 22
+  describe "#min_conf" do
+    it "can be set" do
+      described_class.min_conf = 2
+      expect(described_class.min_conf).to eq 2
+    end
+
+    context "it is nil" do
+      it "is 0" do
+        described_class.min_conf = nil
+        expect(described_class.min_conf).to eq 0
+      end
     end
   end
 

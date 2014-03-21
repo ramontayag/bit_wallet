@@ -33,7 +33,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   config.before(:each) do
-    BitWallet.config.min_conf = 0
+    BitWallet.min_conf = 0
   end
 
   config.order = "random"

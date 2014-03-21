@@ -19,7 +19,7 @@ module BitWallet
     def move(from_account,
              to_account,
              amount,
-             min_conf=BitWallet.config.min_conf,
+             min_conf=BitWallet.min_conf,
              comment=nil)
 
       from_account_str = if from_account.respond_to?(:name)

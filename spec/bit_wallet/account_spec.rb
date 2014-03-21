@@ -42,11 +42,11 @@ describe BitWallet::Account, vcr: true do
 
     it 'should return the balance of the account' do
       subject.balance.should ==
-        subject.client.getbalance(subject.name, BitWallet.config.min_conf)
+        subject.client.getbalance(subject.name, BitWallet.min_conf)
     end
 
     it 'should default to the config min_conf' do
-      BitWallet.config.min_conf = 2
+      BitWallet.min_conf = 2
       subject.client.should_receive(:getbalance).with(subject.name, 2)
       subject.balance(2)
     end
@@ -95,7 +95,7 @@ describe BitWallet::Account, vcr: true do
   describe '#total_received' do
     it 'should return the total amount received by the address' do
       subject.client.stub(:getreceivedbyaccount).
-        with(subject.name, BitWallet.config.min_conf).
+        with(subject.name, BitWallet.min_conf).
         and_return(2.1)
       subject.total_received.should == 2.1
     end

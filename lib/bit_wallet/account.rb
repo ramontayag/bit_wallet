@@ -14,7 +14,7 @@ module BitWallet
       @addresses ||= Addresses.new(self)
     end
 
-    def balance(min_conf=BitWallet.config.min_conf)
+    def balance(min_conf=BitWallet.min_conf)
       client.getbalance(self.name, min_conf)
     end
 
@@ -28,13 +28,13 @@ module BitWallet
       client.sendfrom(self.name,
                       options[:to],
                       amount,
-                      BitWallet.config.min_conf)
+                      BitWallet.min_conf)
     rescue Bitcoin::Errors::RPCError => e
       parse_error e.message
     end
 
     def total_received
-      client.getreceivedbyaccount(self.name, BitWallet.config.min_conf)
+      client.getreceivedbyaccount(self.name, BitWallet.min_conf)
     end
 
     def ==(other_account)
@@ -57,7 +57,7 @@ module BitWallet
 
       txid = client.send_many(self.name,
                               addresses_values,
-                              BitWallet.config.min_conf)
+                              BitWallet.min_conf)
       txid
     rescue => e
       parse_error e.message

@@ -15,7 +15,7 @@ module BitWallet
     end
 
     def total_received
-      client.getreceivedbyaddress(self.address, BitWallet.config.min_conf)
+      client.getreceivedbyaddress(self.address, BitWallet.min_conf)
     end
 
     def ==(other_address)

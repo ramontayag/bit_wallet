@@ -19,8 +19,11 @@ require 'bit_wallet/handles_error'
 
 module BitWallet
 
-  mattr_accessor :config
-  @@config = OpenStruct.new
+  mattr_writer :min_conf
+
+  def self.min_conf
+    @@min_conf || 0
+  end
 
   def self.at(*args)
     Wallet.new(*args)
