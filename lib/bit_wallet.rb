@@ -20,6 +20,7 @@ require 'bit_wallet/handles_error'
 module BitWallet
 
   mattr_writer :min_conf
+  @@min_conf = 0
 
   def self.min_conf
     @@min_conf || 0
