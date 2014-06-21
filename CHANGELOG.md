@@ -1,3 +1,7 @@
+# TBA
+
+- Raise error when an account name is nil
+
 # v0.7.1
 
 - Fix issue where an undefined `BitWallet.min_conf` was causing an exception to be raised. Defaults it to 0.

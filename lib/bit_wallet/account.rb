@@ -7,6 +7,7 @@ module BitWallet
     def initialize(wallet, name)
       @wallet = wallet
       @name = name
+      fail ArgumentError, "account name cannot be nil" if name.nil?
       self.addresses.new
     end
 

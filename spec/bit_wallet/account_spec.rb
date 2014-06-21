@@ -35,6 +35,14 @@ describe BitWallet::Account, vcr: true do
         }.to_not change(wallet.accounts, :size)
       end
     end
+
+    context "name is nil" do
+      it "raises an error" do
+        wallet = BitWallet::Wallet.new(Config.slice(:username, :port, :password))
+        expect { wallet.accounts.new(nil) }.
+          to raise_error(ArgumentError, "account name cannot be nil")
+      end
+    end
   end
 
   describe '#balance' do
