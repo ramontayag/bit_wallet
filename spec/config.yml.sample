@@ -1,0 +1,5 @@
+rpcport: 19001
+rpcuser: bitcoinrpc
+rpcpassword: thisisjustapasswordfortesting
+
+bitcoin_dir: "/path/to/.bitcoin"

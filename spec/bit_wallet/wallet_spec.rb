@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module BitWallet
-  describe Wallet, vcr: true do
+  describe Wallet, vcr: {record: :once}, bitcoin_cleaner: true do
 
     describe '#accounts' do
       it 'should return array of BitWallet::Accounts' do
@@ -17,7 +17,7 @@ module BitWallet
         account_1 = wallet.accounts.new('1')
 
         1.upto(11).each do |n|
-          default_account.send_amount n, to: account_1.addresses.first
+          default_account.send_amount 0.1, to: account_1.addresses.first
         end
 
         wallet.recent_transactions.size.should == 10
@@ -29,7 +29,7 @@ module BitWallet
         account_1 = wallet.accounts.new('1')
 
         1.upto(11).each do |n|
-          default_account.send_amount n, to: account_1.addresses.first
+          default_account.send_amount 0.1, to: account_1.addresses.first
         end
 
         wallet.recent_transactions(limit: 5).size.should == 5

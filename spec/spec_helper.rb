@@ -9,7 +9,7 @@ require 'active_support/core_ext/hash/slice'
 require 'pry'
 require 'factory_girl'
 require_relative 'factories'
-require 'bitcoin_testnet'
+require 'bitcoin_cleaner'
 require 'vcr'
 require 'webmock'
 
@@ -26,8 +26,8 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 end
 
-BitcoinTestnet.configure_with_rspec_and_vcr!
-BitcoinTestnet.dir = File.join(File.dirname(__FILE__), 'testnet')
+BitcoinCleaner.configure_with_rspec_and_vcr!
+BitcoinCleaner.dir = yaml_config.fetch(:bitcoin_dir)
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods

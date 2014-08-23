@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet::Addresses, vcr: true do
+describe BitWallet::Addresses, vcr: {record: :once}, bitcoin_cleaner: true do
 
   let(:account) { build(:account) }
   subject { BitWallet::Addresses.new(account) }

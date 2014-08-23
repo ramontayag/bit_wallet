@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BitWallet::Account, vcr: true do
+describe BitWallet::Account, vcr: {record: :once}, bitcoin_cleaner: true do
 
   let(:wallet) { build(:wallet) }
   subject { described_class.new(wallet, 'name') }
@@ -116,7 +116,7 @@ describe BitWallet::Account, vcr: true do
       account_1 = wallet.accounts.new('1')
 
       1.upto(11).each do |n|
-        default_account.send_amount n, to: account_1.addresses.first
+        default_account.send_amount 0.1, to: account_1.addresses.first
       end
 
       account_1.recent_transactions.size.should == 10

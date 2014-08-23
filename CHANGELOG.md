@@ -1,6 +1,7 @@
 # TBA
 
 - Raise error when an account name is nil
+- Use BitcoinCleaner over BitcoinTestnet to facilitate cleaning of bitcoin daemon
 
 # v0.7.1
 

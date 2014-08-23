@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"listaccounts","params":[1],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"listaccounts","params":[1],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
@@ -23,31 +23,30 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
-      - '58'
+      - '56'
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":{"":8800.00000000},"error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":{"":50.00000000},"error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"getnewaddress","params":[""],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"getnewaddress","params":[""],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
@@ -62,7 +61,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -70,23 +69,22 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"mi487X6jj8ggY6FAoG8ibv7qomcq9TXL1U","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"mqH7TtqcLjtSzHgfrx14th8wkfzChaWsvC","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"getnewaddress","params":["1"],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"getnewaddress","params":["1"],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
@@ -101,7 +99,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -109,29 +107,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",1,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -140,7 +137,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -148,29 +145,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"be817888b2f16d43250ed368a1c9f6681d1a184604afa01debfdac1c7533da41","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"320a49baf8a150a340f225a6d89e6a883063f95ba9682e23e21358839f73a135","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",2,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -179,7 +175,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -187,29 +183,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"24c696c646d276f33f80858affe5fb02b248af0e255174719dd34ae499c3da04","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"4d6fa7f604db08cc45693e848a8dfee9d2bb4a40077b741e3c660d0d5f230d76","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",3,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -218,7 +213,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -226,29 +221,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"b17a5e4f37e3e26873d7be16c25a290580b6822109eacaf6c24b88cbf7741f20","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"0de720aabd6036bfb1c17807f7aeae7b95d3492dfeba930999cf98e8091cb317","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",4,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -257,7 +251,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -265,29 +259,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"3f49d6db4c3a0c031f6b790539a845bcb0c49a22a58d408f83d7b3c096651fcb","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"b1b296d1341fd007ffaf4ab577d54f2d97f6dbb1554f64c8b15d60813ddcd62d","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",5,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -296,7 +289,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -304,29 +297,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"b16c2c9307fe7cc068a372513416ba807c3fa0bac2b7ef10c608b3fbd2b28c64","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"d38bc11e2b8b8b868b8b18f2b93832e7260ff9a5a7498398bba489ea3488777a","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",6,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -335,7 +327,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -343,29 +335,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"0bb424d466cb6073d7df704020323e42723e0fb44ac0508d992e80f73d5e1195","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"9b6e6965d0e40cb30fabe022cbcab59cc14a39c4acb61999d8c52321d0f10f4d","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",7,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -374,7 +365,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -382,29 +373,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"886a5dabd40f95d75d95af909888cd52bc39f574bd8900bbd4b1d4eb9a2429c8","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"3e0380b15cac29dcd18260ae87e770f740d7f467f733185d61b2c9326dc31e9a","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",8,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -413,7 +403,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -421,29 +411,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"ba4247d3e593903eced6f16bf194145fdf2a67e9fe134b4530a470424605e6ac","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"e86b2f4f54d30728573b9c83a775cdcac6ac728c205b083b686516032197fea3","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",9,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '91'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -452,7 +441,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -460,29 +449,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"a0773c4c0dbbc78bb35f59159b6c32079194c41ca4f0170789d9cea6d8590808","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"4c15ac93c110e33f38fb670cc9c200892c02e798de8f95642d45b3bbe1d109df","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",10,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '92'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -491,7 +479,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -499,29 +487,28 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"20f6669c351dfac454f9a686fedb2e7bb3f9926c51479173f4419c77c9f85686","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"b186655f89fa72d85eaa3b6e919b30ffd901f758ab0d63184b194f504304a1aa","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"sendfrom","params":["","mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv",11,0],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"sendfrom","params":["","mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L",0.1,0],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
       - application/json
       Content-Length:
-      - '92'
+      - '93'
       User-Agent:
       - Ruby
   response:
@@ -530,7 +517,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -538,23 +525,22 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":"765c1841595bf9204b198ca9a5457a1236f516b79a903077d61b8bd7a562c075","error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":"689a8505b574d1270b94e2a4612f9af0e720b4bddf932eefac176702244a316d","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 - request:
     method: post
-    uri: http://admin1:123@localhost:19001/
+    uri: http://bitcoinrpc:thisisjustapasswordfortesting@localhost:19001/
     body:
-      encoding: US-ASCII
-      string: ! '{"method":"listtransactions","params":["*",5],"id":"jsonrpc"}'
+      encoding: UTF-8
+      string: '{"method":"listtransactions","params":["*",5],"id":"jsonrpc"}'
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
@@ -569,20 +555,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Mar 2014 14:05:54 +0000
+      - Sat, 23 Aug 2014 09:43:23 +0000
       Connection:
       - keep-alive
       Content-Length:
-      - '1287'
+      - '1391'
       Content-Type:
       - application/json
       Server:
-      - bitcoin-json-rpc/v0.7.2-beta
+      - bitcoin-json-rpc/v0.9.2.1-g354c0f3-beta
     body:
-      encoding: US-ASCII
-      string: ! '{"result":[{"account":"","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"send","amount":-9.00000000,"fee":0.00000000,"confirmations":0,"txid":"a0773c4c0dbbc78bb35f59159b6c32079194c41ca4f0170789d9cea6d8590808","time":1393941954,"timereceived":1393941954},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":10.00000000,"confirmations":0,"txid":"20f6669c351dfac454f9a686fedb2e7bb3f9926c51479173f4419c77c9f85686","time":1393941954,"timereceived":1393941954},{"account":"","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"send","amount":-10.00000000,"fee":0.00000000,"confirmations":0,"txid":"20f6669c351dfac454f9a686fedb2e7bb3f9926c51479173f4419c77c9f85686","time":1393941954,"timereceived":1393941954},{"account":"1","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"receive","amount":11.00000000,"confirmations":0,"txid":"765c1841595bf9204b198ca9a5457a1236f516b79a903077d61b8bd7a562c075","time":1393941954,"timereceived":1393941954},{"account":"","address":"mkwWW2pnqFkDfH5esHxXBNARTN7GnUDpsv","category":"send","amount":-11.00000000,"fee":0.00000000,"confirmations":0,"txid":"765c1841595bf9204b198ca9a5457a1236f516b79a903077d61b8bd7a562c075","time":1393941954,"timereceived":1393941954}],"error":null,"id":"jsonrpc"}
-
-'
+      encoding: UTF-8
+      string: |
+        {"result":[{"account":"","address":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","category":"send","amount":-0.10000000,"fee":-0.00010000,"confirmations":0,"txid":"4c15ac93c110e33f38fb670cc9c200892c02e798de8f95642d45b3bbe1d109df","walletconflicts":[],"time":1408787003,"timereceived":1408787003},{"account":"1","address":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","category":"receive","amount":0.10000000,"confirmations":0,"txid":"b186655f89fa72d85eaa3b6e919b30ffd901f758ab0d63184b194f504304a1aa","walletconflicts":[],"time":1408787003,"timereceived":1408787003},{"account":"","address":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","category":"send","amount":-0.10000000,"fee":-0.00010000,"confirmations":0,"txid":"b186655f89fa72d85eaa3b6e919b30ffd901f758ab0d63184b194f504304a1aa","walletconflicts":[],"time":1408787003,"timereceived":1408787003},{"account":"1","address":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","category":"receive","amount":0.10000000,"confirmations":0,"txid":"689a8505b574d1270b94e2a4612f9af0e720b4bddf932eefac176702244a316d","walletconflicts":[],"time":1408787003,"timereceived":1408787003},{"account":"","address":"mkMdA61Q5n5BqQecxMvmVprtcvfadE6j8L","category":"send","amount":-0.10000000,"fee":-0.00010000,"confirmations":0,"txid":"689a8505b574d1270b94e2a4612f9af0e720b4bddf932eefac176702244a316d","walletconflicts":[],"time":1408787003,"timereceived":1408787003}],"error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Tue, 04 Mar 2014 14:05:54 GMT
+  recorded_at: Sat, 23 Aug 2014 09:43:23 GMT
 recorded_with: VCR 2.8.0

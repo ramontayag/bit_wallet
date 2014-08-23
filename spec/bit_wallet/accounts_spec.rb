@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module BitWallet
-  describe Accounts, vcr: {record: :once} do
+  describe Accounts, vcr: {record: :once}, bitcoin_cleaner: true do
 
     let(:wallet) do
       build(:wallet)
