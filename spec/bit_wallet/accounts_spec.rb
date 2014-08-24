@@ -21,20 +21,13 @@ module BitWallet
       end
     end
 
-    describe '#includes_account_name?(account)' do
-      it 'should return true if the array includes the account' do
-        account = subject.new('accountname')
-        subject.includes_account_name?('accountname').should == true
-      end
-    end
-
     describe '.with_balance' do
       it 'should return accounts with a balance > 0' do
         default_account = subject.new('')
         account_1 = subject.new('nomoney')
         account_2 = subject.new('moneyd')
 
-        default_account.send_amount 10, to: account_2.addresses.first
+        default_account.send_amount 5, to: account_2.addresses.first
 
         accounts_with_balance = subject.with_balance
         accounts_with_balance.should include(default_account)
