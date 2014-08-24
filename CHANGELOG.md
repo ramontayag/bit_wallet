@@ -1,3 +1,7 @@
+# TBA
+
+- [#3](https://github.com/ramontayag/bit_wallet/issues/3): no longer fetch list of accounts during initialization
+
 # v0.7.2
 
 - Raise error when an account name is nil

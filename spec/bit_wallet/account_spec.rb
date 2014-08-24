@@ -19,8 +19,7 @@ describe BitWallet::Account, vcr: {record: :once}, bitcoin_cleaner: true do
                                                   :port,
                                                   :password))
       account = wallet.accounts.new('nona')
-
-      wallet.accounts.includes_account_name?('nona').should be_true
+      expect(account.name).to eq "nona"
     end
 
     context 'when the account name already exists' do
@@ -28,7 +27,7 @@ describe BitWallet::Account, vcr: {record: :once}, bitcoin_cleaner: true do
         wallet = BitWallet::Wallet.new(Config.slice(:username,
                                                     :port,
                                                     :password))
-        account = wallet.accounts.new('nona')
+        wallet.accounts.new('nona')
 
         expect {
           wallet.accounts.new('nona')
