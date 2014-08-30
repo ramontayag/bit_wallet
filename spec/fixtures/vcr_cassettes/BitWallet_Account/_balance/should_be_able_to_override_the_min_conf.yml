@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 24 Aug 2014 06:47:18 +0000
+      - Sat, 30 Aug 2014 12:34:53 +0000
       Connection:
       - keep-alive
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |
-        {"result":"mgajLc8bC4TMsqEiRS2irxbMW29EWMcq43","error":null,"id":"jsonrpc"}
+        {"result":"miXfqZZm4KSmoWyCuA8zPLNVMiFTQ3X7n2","error":null,"id":"jsonrpc"}
     http_version: 
-  recorded_at: Sun, 24 Aug 2014 06:47:18 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Sat, 30 Aug 2014 12:34:53 GMT
+recorded_with: VCR 2.9.2

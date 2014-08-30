@@ -1,3 +1,7 @@
+# TBA
+
+- `listtransactions` of blockchain.info returns a differently formatted result - work around it
+
 # v0.7.3
 
 - [#3](https://github.com/ramontayag/bit_wallet/issues/3): no longer fetch list of accounts during initialization
