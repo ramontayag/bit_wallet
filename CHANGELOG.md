@@ -1,3 +1,7 @@
+# v0.7.5
+
+- Fix bug with `Account#recent_transactions`
+
 # v0.7.4
 
 - `listtransactions` of blockchain.info returns a differently formatted result - work around it
