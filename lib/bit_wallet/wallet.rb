@@ -11,7 +11,14 @@ module BitWallet
 
     def recent_transactions(options={})
       count = options.delete(:limit) || 10
-      client.listtransactions('*', count).map do |hash|
+      # FIXME: come up with adapters to abstract the differences between
+      # bitcoind and blockchain.info API
+      api_result = client.listtransactions("*", count)
+      txs = api_result
+      if api_result.is_a?(Hash)
+        txs = api_result.with_indifferent_access.fetch(:transactions)
+      end
+      txs.map do |hash|
         Transaction.new self, hash
       end
     end

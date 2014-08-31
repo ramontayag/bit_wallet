@@ -1,3 +1,7 @@
+# v0.7.6
+
+- Fix problem with `Wallet#recent_transactions` when connected to blockchain.info
+
 # v0.7.5
 
 - Fix bug with `Account#recent_transactions`
